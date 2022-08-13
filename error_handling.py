@@ -1,3 +1,8 @@
+class UncountableError(ValueError):
+    def __init__(self, wrong_value):
+        super().__init__(f'Invalid value for n, {wrong_value}. n must be greater than 0.')
+
+
 def interact():
     while True:  # keep looping until user reach break statement
         try:
